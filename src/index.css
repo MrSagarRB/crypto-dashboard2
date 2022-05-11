@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.test {
+  border: 1px solid red;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.purple-bg {
+  background-color: #4e36fc;
+}
+
+.purple-text {
+  color: #4e36fc;
+}
+
+.tomorrow {
+  font-family: "Tomorrow", sans-serif;
+}
+
+.text-2 {
+  color: #151630;
+}
+
+.text-3 {
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.effect {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
