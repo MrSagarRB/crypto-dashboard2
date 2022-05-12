@@ -6,70 +6,70 @@ const ColorCardData = [
     id: 1,
     coins: "BTC/USD",
     value: "18 928.15",
-    color: "#E3E0FF",
+    color: "color-1",
   },
   {
     id: 2,
     coins: "ETH/USD",
     value: "591.8874",
-    color: "#D7F8E8",
+    color: "color-2",
   },
   {
     id: 3,
     coins: "XRP/USD",
     value: "0.61688",
-    color: "#DAE3F7",
+    color: "color-3",
   },
   {
     id: 4,
     coins: "Litecoin/USD",
     value: "87.9917",
-    color: "#F0EDEA",
+    color: "color-4",
   },
 ];
 
 const appCardData = [
   {
     id: 1,
-    logo: "fb.png",
+    logo: "foodpanda.png",
     logoBg: "#3B5998",
+    title: "Foodpanda",
+    category: "Meal",
+    value: "- $15.85",
+    time: "10:00 PM",
+  },
+  {
+    id: 2,
+    logo: "vodafone.png",
+    logoBg: "voda-bg",
+    title: "Vodafone",
+    category: "Phone",
+    value: "$58",
+    time: "11:45 AM",
+  },
+  {
+    id: 3,
+    logo: "fb.png",
+    logoBg: "fb-bg",
     title: "Facebook",
     category: "Salary",
     value: "+$7000",
     time: "11:45 AM",
   },
   {
-    id: 1,
-    logo: "fb.png",
-    logoBg: "#3B5998",
-    title: "Facebook",
+    id: 4,
+    logo: "uber.png",
+    logoBg: "uber-bg",
+    title: "Uber Premier",
     category: "Salary",
     value: "+$7000",
     time: "11:45 AM",
   },
   {
-    id: 1,
-    logo: "fb.png",
-    logoBg: "#3B5998",
-    title: "Facebook",
-    category: "Salary",
-    value: "+$7000",
-    time: "11:45 AM",
-  },
-  {
-    id: 1,
-    logo: "fb.png",
-    logoBg: "#3B5998",
-    title: "Facebook",
-    category: "Salary",
-    value: "+$7000",
-    time: "11:45 AM",
-  },
-  {
-    id: 1,
-    logo: "fb.png",
-    logoBg: "#3B5998",
-    title: "Facebook",
+    id: 5,
+    logo: "city.png",
+    logoBg: "uber-bg",
+    title: "Citi Bank ",
     category: "Salary",
     value: "+$7000",
     time: "11:45 AM",
@@ -118,12 +118,11 @@ function Overview() {
               />
             </div>
           </div>
-          <div className="test w-[250px] flex-center flex-col justify-between">
+          <div className=" w-[250px] flex-center flex-col justify-between">
             {ColorCardData.map((item) => {
-              console.log(item.color);
               return (
                 <div
-                  className={`bg-[${item.color}] w-full h-[97px] flex-center flex-col justify-center test`}
+                  className={`bg-[#ffff ] ${item.color} w-full h-[97px] flex-center flex-col justify-center `}
                 >
                   <p className="text-[#6B6570]">{item.coins}</p>
                   <p className="text-[#151630] font-[600] text-[21px] flex-center gap-2">
@@ -134,13 +133,15 @@ function Overview() {
               );
             })}
           </div>
-          <div className="w-[30%] test ml-auto flex flex-col justify-between">
+          <div className="w-[30%]  ml-auto flex flex-col justify-between">
             {appCardData.map((item) => {
               return (
-                <div className=" h-[77px] p-5 flex-center justify-between bg-white">
+                <div className=" h-[77px] p-5 flex-center justify-between bg-white ">
                   <div className="flex-center gap-5 ">
-                    <div className="w-[57px] h-[57px] bg-[#3B5998] flex-center justify-center rounded-[8px]">
-                      <img src="./app logo/fb.png" />
+                    <div
+                      className={`w-[57px] h-[57px] ${item.logoBg} flex-center justify-center rounded-[8px] `}
+                    >
+                      <img src={`./app logo/${item.logo}`} />
                     </div>
                     <div className="font-[400]">
                       <p className="text-[#1E253A] text-[16px]">
