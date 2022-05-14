@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Header from "../components/header/Header";
 import Overview from "../components/overview/Overview";
+import Security from "../components/Security";
 import Sidebar from "../components/Sidebar";
 
 function HomePage() {
@@ -17,7 +18,10 @@ function HomePage() {
         <div>
           <Overview />
         </div>
-        <div>Security</div>
+
+        <div className=" w-[80%] mt-5">
+          <Security />
+        </div>
       </div>
     </div>
   );
